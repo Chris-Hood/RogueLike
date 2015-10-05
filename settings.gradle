@@ -2,7 +2,5 @@ rootProject.name = 'RogueLike'
 include 'Console'
 include 'lib_jcsi'
 include 'Controller'
-include 'Mapping'
-include 'Entity'
-include 'Entity'
+include 'Model'
 
