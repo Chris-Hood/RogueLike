@@ -1,0 +1,24 @@
+{
+  "ids" : [
+    "grass",
+    "tree",
+    "stone"
+  ],
+  "tiles": [
+    {
+      "passable": true,
+      "display": ".",
+      "color": 2
+    },
+    {
+      "passable": false,
+      "display": "T",
+      "color": 2
+    },
+    {
+      "passable": false,
+      "display": "#",
+      "color": 8
+    }
+  ]
+}

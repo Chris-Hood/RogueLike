@@ -1,0 +1,31 @@
+def langLevel = 1.8
+
+allprojects {
+    apply plugin: 'idea'
+
+    group 'org.chrishood'
+    version '1.0-SNAPSHOT'
+}
+
+subprojects {
+    apply plugin: 'java'
+
+    sourceCompatibility = langLevel
+
+    repositories {
+        mavenLocal()
+        mavenCentral()
+    }
+
+    dependencies {
+        testCompile group: 'junit', name: 'junit', version: '4.11'
+        compile "javax.ws.rs:jsr311-api:1.1.1"
+
+        compile 'com.sun.jersey:jersey-server:1.13'
+        compile 'com.sun.jersey:jersey-core:1.13'
+        compile 'com.sun.jersey:jersey-servlet:1.13'
+        compile 'com.sun.jersey:jersey-json:1.13'
+        compile 'org.springframework:spring-core:4.0.3.RELEASE'
+        compile 'org.springframework:spring-context:4.0.0.RELEASE'
+    }
+}
