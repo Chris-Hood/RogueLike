@@ -1,7 +1,7 @@
-package layout.builder;
+package org.chrishood.mapping.builder;
 
-import layout.Map;
-import layout.TileSet;
+import org.chrishood.mapping.Map;
+import org.chrishood.mapping.TileSet;
 
 import java.io.BufferedReader;
 import java.io.IOException;

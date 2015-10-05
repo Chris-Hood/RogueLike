@@ -1,6 +1,6 @@
-package layout.builder;
+package org.chrishood.mapping.builder;
 
-import layout.Map;
+import org.chrishood.mapping.Map;
 
 /**
  * Created by Chris on 10/2/2015.

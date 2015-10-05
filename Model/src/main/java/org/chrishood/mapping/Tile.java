@@ -1,4 +1,4 @@
-package layout;
+package org.chrishood.mapping;
 
 /**
  * Created by Chris on 10/2/2015.

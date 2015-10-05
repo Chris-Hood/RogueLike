@@ -1,4 +1,4 @@
-package entity;
+package org.chrishood.entity;
 
 import java.util.Random;
 
