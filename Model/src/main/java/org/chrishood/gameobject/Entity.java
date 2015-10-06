@@ -1,4 +1,4 @@
-package org.chrishood.entity;
+package org.chrishood.gameobject;
 
 import java.util.Random;
 

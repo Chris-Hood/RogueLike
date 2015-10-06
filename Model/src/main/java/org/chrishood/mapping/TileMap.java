@@ -3,7 +3,7 @@ package org.chrishood.mapping;
 /**
  * Created by Chris on 10/2/2015.
  */
-public class Map {
+public class TileMap {
     private final int xSize;
     private final int ySize;
     private Tile[] tiles;
@@ -26,7 +26,7 @@ public class Map {
         tiles[get1DimOffset(y, x)] = tile;
     }
 
-    public Map(int ySize, int xSize) {
+    public TileMap(int ySize, int xSize) {
         this.ySize = ySize;
         this.xSize = xSize;
         this.tiles = TileRepository.getInstance().getTileArray(ySize, xSize);
