@@ -3,6 +3,5 @@ mainClassName = "init.Main"
 
 dependencies {
     compile project(':lib_jcsi')
-    compile project(':Mapping')
-    compile project(':Entity')
+    compile project(':Model')
 }

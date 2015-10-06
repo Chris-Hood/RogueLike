@@ -1,11 +1,11 @@
 package init;
 
-import entity.Entity;
-import layout.Map;
-import layout.TileRepository;
-import layout.TileSet;
-import layout.builder.IMapBuilder;
-import layout.builder.StreamMapBuilder;
+import org.chrishood.gameobject.Entity;
+import org.chrishood.mapping.TileMap;
+import org.chrishood.mapping.TileRepository;
+import org.chrishood.mapping.TileSet;
+import org.chrishood.mapping.builder.IMapBuilder;
+import org.chrishood.mapping.builder.StreamMapBuilder;
 import net.slashie.libjcsi.CharKey;
 import net.slashie.libjcsi.ConsoleSystemInterface;
 import net.slashie.libjcsi.wswing.WSwingConsoleInterface;
@@ -48,7 +48,7 @@ public class Main {
         TileSet tileSet = new TileSet(tileIds);
         IMapBuilder mapBuilder = new StreamMapBuilder(tileSet, Main.class.getResourceAsStream("TestMap.txt"));
 
-        Map m = mapBuilder.build();
+        TileMap m = mapBuilder.build();
 
         Random rand = new Random();
 
@@ -150,7 +150,7 @@ public class Main {
         return (xDist == 0 && yDist == 1) || (xDist == 1 && yDist == 0);
     }
 
-    public static void printMap(Map map, ConsoleSystemInterface console) {
+    public static void printMap(TileMap map, ConsoleSystemInterface console) {
         for (int i = 0; i < map.getySize(); ++i) {
             for (int k = 0; k < map.getxSize(); ++k) {
                 console.print(k, i, map.getTile(i, k).getDisplay(), map.getTile(i, k).getColor());
