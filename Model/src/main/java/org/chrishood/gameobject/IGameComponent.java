@@ -6,5 +6,5 @@ package org.chrishood.gameobject;
 public interface IGameComponent {
     String getId();
     GameObject getGameObject();
-    void receiveMessage(GameObjectMessage message);
+    void receiveMessage(String topic, GameObjectMessage message);
 }

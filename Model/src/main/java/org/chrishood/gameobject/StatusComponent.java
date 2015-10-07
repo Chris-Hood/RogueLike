@@ -17,7 +17,7 @@ public class StatusComponent implements IGameComponent {
     }
 
     @Override
-    public void receiveMessage(GameObjectMessage message) {
+    public void receiveMessage(String topic, GameObjectMessage message) {
 
     }
 

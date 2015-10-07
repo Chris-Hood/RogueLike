@@ -24,14 +24,19 @@ public class GameObject {
     }
 
     public boolean removeComponents (String id) {
-        return components.remove(id) != null;
+        IGameComponent component = components.remove(id);
+        if(component == null) return false;
+        for(Set<IGameComponent> components : messageBoard.values()) {
+            if(components.contains(component)) components.remove(component);
+        }
+        return true;
     }
 
     public void broadcast(String topic, GameObjectMessage message) {
         Set<IGameComponent> callees = messageBoard.get(topic);
         if (callees == null || callees.size() == 0) return;
         for (IGameComponent callee : callees) {
-            callee.receiveMessage(message);
+            callee.receiveMessage(topic, message);
         }
     }
 
