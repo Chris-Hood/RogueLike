@@ -1,4 +1,4 @@
-package org.chrishood.gameobject;
+package org.chrishood.gameobject.messages;
 
 import org.chrishood.gameobject.components.IGameComponent;
 

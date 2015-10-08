@@ -1,6 +1,7 @@
 package org.chrishood.gameobject;
 
 import org.chrishood.gameobject.components.IGameComponent;
+import org.chrishood.gameobject.messages.GameObjectMessage;
 
 import java.util.HashMap;
 import java.util.HashSet;
