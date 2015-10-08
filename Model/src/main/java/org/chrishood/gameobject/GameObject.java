@@ -10,11 +10,21 @@ import java.util.Set;
  */
 public class GameObject {
     private final long id;
+    private final String name;
     private final Map<String, IGameComponent> components;
     private final Map<String, Set<IGameComponent>> messageBoard;
 
-    public GameObject(long id) {
+    public long getId() {
+        return id;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public GameObject(long id, String name) {
         this.id = id;
+        this.name = name;
         components = new HashMap<>();
         messageBoard = new HashMap<>();
     }
