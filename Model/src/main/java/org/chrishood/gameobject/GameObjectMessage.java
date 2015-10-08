@@ -1,5 +1,7 @@
 package org.chrishood.gameobject;
 
+import org.chrishood.gameobject.components.IGameComponent;
+
 /**
  * Created by Chris on 10/6/2015.
  */

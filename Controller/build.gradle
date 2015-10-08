@@ -1,5 +1,5 @@
 apply plugin: 'application'
-mainClassName = "init.Main"
+mainClassName = "org.chrishood.init.Main"
 
 dependencies {
     compile project(':lib_jcsi')

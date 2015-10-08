@@ -1,5 +1,7 @@
-package org.chrishood.gameobject;
+package org.chrishood.gameobject.components;
 
+import org.chrishood.gameobject.GameObject;
+import org.chrishood.gameobject.GameObjectMessage;
 import org.chrishood.util.Point;
 
 /**
