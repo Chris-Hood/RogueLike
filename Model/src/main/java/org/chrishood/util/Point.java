@@ -10,16 +10,8 @@ public class Point {
         return x;
     }
 
-    public void setX(int x) {
-        this.x = x;
-    }
-
     public int getY() {
         return y;
-    }
-
-    public void setY(int y) {
-        this.y = y;
     }
 
     public Point(int x, int y) {
@@ -27,10 +19,20 @@ public class Point {
         this.y = y;
     }
 
+    public Point(Point point) {
+        x = point.x;
+        y = point.y;
+    }
+
     @Override
     public boolean equals(Object that) {
         if (!(that instanceof Point)) return false;
         Point instance = (Point) that;
         return instance.x == this.x && instance.y == this.y;
+    }
+
+    @Override
+    public int hashCode() {
+        return x * y;
     }
 }

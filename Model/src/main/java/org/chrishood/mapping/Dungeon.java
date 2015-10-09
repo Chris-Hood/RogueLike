@@ -17,7 +17,7 @@ import java.util.List;
  */
 public class Dungeon implements IMessageConsumer {
     List<TileMap> floors;
-    List<HashMap<Point, GameObject>> gameObjects;
+    List<HashMap<Point, LocationComponent>> gameObjects;
 
     public Dungeon(List<TileMap> floors) {
         this.floors = floors;
@@ -35,18 +35,32 @@ public class Dungeon implements IMessageConsumer {
                 || gameObjects.get(moved.getNewFloor()).get(moved.getNewLocation()) != null) {
                 throw new IllegalStateException();
             }
+            LocationComponent locationComponent = getLocationComponent(message.getSource());
+
             gameObjects.get(moved.getOldFloor()).remove(moved.getOldLocation());
-            gameObjects.get(moved.getNewFloor()).put(moved.getNewLocation(), message.getSource());
+            gameObjects.get(moved.getNewFloor()).put(moved.getNewLocation(), locationComponent);
         }
     }
 
     public void addGameObject(GameObject object) {
-        IGameComponent gameComponent = object.getGameComponent(LocationComponent.class.getName());
-        if (!(gameComponent instanceof LocationComponent))
-            throw new IllegalArgumentException("object does not have a LocationComponent.");
-        LocationComponent locationComponent = (LocationComponent) gameComponent;
-        gameObjects.get(locationComponent.getFloor()).put(locationComponent.getFloorLocation(), object);
+        LocationComponent locationComponent = getLocationComponent(object);
+        gameObjects.get(locationComponent.getFloor())
+                   .put(new Point(locationComponent.getFloorLocation()), locationComponent);
+
         object.subscribe("moved", this);
+    }
+
+    public boolean moveGameObject(GameObject object, Point newLocation, int floor) {
+        if (!open(newLocation, floor)) return false;
+
+        LocationComponent locationComponent = getLocationComponent(object);
+        locationComponent.move(newLocation, floor);
+        return true;
+    }
+
+    public boolean open(Point location, int floor) {
+        return floors.get(floor).getTile(location.getY(), location.getX()).isPassable() &&
+               gameObjects.get(floor).get(location) == null;
     }
 
     public TileMap getFloor(int level) {
@@ -54,6 +68,13 @@ public class Dungeon implements IMessageConsumer {
     }
 
     public GameObject getObjectAt(int floor, Point location) {
-        return gameObjects.get(floor).get(location);
+        return gameObjects.get(floor).get(location).getGameObject();
+    }
+
+    private LocationComponent getLocationComponent(GameObject object) {
+        IGameComponent gameComponent = object.getGameComponent(LocationComponent.class.getName());
+        if (!(gameComponent instanceof LocationComponent))
+            throw new IllegalArgumentException("object does not have a LocationComponent.");
+        return (LocationComponent) gameComponent;
     }
 }
