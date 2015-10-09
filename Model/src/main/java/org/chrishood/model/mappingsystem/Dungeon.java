@@ -1,4 +1,4 @@
-package org.chrishood.model.mapping;
+package org.chrishood.model.mappingsystem;
 
 import org.chrishood.model.gameobject.GameObject;
 import org.chrishood.model.gameobject.components.IGameComponent;

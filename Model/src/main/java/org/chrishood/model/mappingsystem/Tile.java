@@ -1,4 +1,4 @@
-package org.chrishood.model.mapping;
+package org.chrishood.model.mappingsystem;
 
 /**
  * Created by Chris on 10/2/2015.
