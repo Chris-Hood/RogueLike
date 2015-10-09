@@ -26,4 +26,11 @@ public class Point {
         this.x = x;
         this.y = y;
     }
+
+    @Override
+    public boolean equals(Object that) {
+        if (!(that instanceof Point)) return false;
+        Point instance = (Point) that;
+        return instance.x == this.x && instance.y == this.y;
+    }
 }

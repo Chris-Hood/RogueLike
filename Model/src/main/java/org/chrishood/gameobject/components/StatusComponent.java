@@ -79,6 +79,6 @@ public class StatusComponent implements IGameComponent {
     }
 
     public void test() {
-        owner.broadcast("thing", new GameObjectMessage<String>("stuff", this));
+        owner.broadcast("thing", new GameObjectMessage<String>("stuff", owner));
     }
 }

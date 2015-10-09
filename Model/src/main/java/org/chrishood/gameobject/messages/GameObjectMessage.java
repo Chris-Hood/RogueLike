@@ -1,5 +1,6 @@
 package org.chrishood.gameobject.messages;
 
+import org.chrishood.gameobject.GameObject;
 import org.chrishood.gameobject.components.IGameComponent;
 
 /**
@@ -7,7 +8,7 @@ import org.chrishood.gameobject.components.IGameComponent;
  */
 public class GameObjectMessage<T> {
     private T contents;
-    private IGameComponent source;
+    private GameObject source;
 
     public T getContents() {
         return contents;
@@ -17,11 +18,11 @@ public class GameObjectMessage<T> {
         return contents.getClass();
     }
 
-    public IGameComponent getSource() {
+    public GameObject getSource() {
         return source;
     }
 
-    public GameObjectMessage(T contents, IGameComponent source) {
+    public GameObjectMessage(T contents, GameObject source) {
         this.contents = contents;
         this.source = source;
     }

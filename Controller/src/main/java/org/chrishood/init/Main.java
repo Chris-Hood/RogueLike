@@ -1,6 +1,9 @@
-package init;
+package org.chrishood.init;
 
 import org.chrishood.gameobject.Entity;
+import org.chrishood.gameobject.GameObject;
+import org.chrishood.gameobject.components.LocationComponent;
+import org.chrishood.mapping.Dungeon;
 import org.chrishood.mapping.TileMap;
 import org.chrishood.mapping.TileRepository;
 import org.chrishood.mapping.TileSet;
@@ -9,6 +12,7 @@ import org.chrishood.mapping.builder.StreamMapBuilder;
 import net.slashie.libjcsi.CharKey;
 import net.slashie.libjcsi.ConsoleSystemInterface;
 import net.slashie.libjcsi.wswing.WSwingConsoleInterface;
+import org.chrishood.util.Point;
 
 import java.io.IOException;
 import java.io.InputStream;
@@ -49,7 +53,16 @@ public class Main {
         IMapBuilder mapBuilder = new StreamMapBuilder(tileSet, Main.class.getResourceAsStream("TestMap.txt"));
 
         TileMap m = mapBuilder.build();
-
+        List<TileMap> floors = new ArrayList<>();
+        floors.add(m);
+        Dungeon dungeon = new Dungeon(floors);
+        GameObject g1 = new GameObject(0, "guy1");
+        GameObject g2 = new GameObject(1, "guy2");
+        g1.addComponent(new LocationComponent(g1, new Point(1, 1), 0));
+        g2.addComponent(new LocationComponent(g1, new Point(5, 5), 0));
+        dungeon.addGameObject(g1);
+        dungeon.addGameObject(g2);
+        ((LocationComponent) g1.getGameComponent(LocationComponent.class.getName())).setFloorLocation(new Point(2, 1));
         Random rand = new Random();
 
         int heroX = 1;
