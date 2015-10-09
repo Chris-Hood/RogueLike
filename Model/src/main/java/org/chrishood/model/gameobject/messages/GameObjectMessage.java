@@ -1,7 +1,6 @@
-package org.chrishood.gameobject.messages;
+package org.chrishood.model.gameobject.messages;
 
-import org.chrishood.gameobject.GameObject;
-import org.chrishood.gameobject.components.IGameComponent;
+import org.chrishood.model.gameobject.GameObject;
 
 /**
  * Created by Chris on 10/6/2015.

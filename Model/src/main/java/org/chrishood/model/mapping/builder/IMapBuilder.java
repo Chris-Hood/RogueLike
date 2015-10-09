@@ -1,6 +1,6 @@
-package org.chrishood.mapping.builder;
+package org.chrishood.model.mapping.builder;
 
-import org.chrishood.mapping.TileMap;
+import org.chrishood.model.mapping.TileMap;
 
 /**
  * Created by Chris on 10/2/2015.

@@ -1,4 +1,4 @@
-package org.chrishood.mapping;
+package org.chrishood.model.mapping;
 
 import java.io.BufferedReader;
 import java.io.IOException;

@@ -1,11 +1,11 @@
-package org.chrishood.mapping;
+package org.chrishood.model.mapping;
 
-import org.chrishood.gameobject.GameObject;
-import org.chrishood.gameobject.components.IGameComponent;
-import org.chrishood.gameobject.components.LocationComponent;
-import org.chrishood.gameobject.messages.GameObjectMessage;
-import org.chrishood.gameobject.messages.IMessageConsumer;
-import org.chrishood.gameobject.messages.MovedMessage;
+import org.chrishood.model.gameobject.GameObject;
+import org.chrishood.model.gameobject.components.IGameComponent;
+import org.chrishood.model.gameobject.components.LocationComponent;
+import org.chrishood.model.gameobject.messages.GameObjectMessage;
+import org.chrishood.model.gameobject.messages.IMessageConsumer;
+import org.chrishood.model.gameobject.messages.MovedMessage;
 import org.chrishood.util.Point;
 
 import java.util.ArrayList;

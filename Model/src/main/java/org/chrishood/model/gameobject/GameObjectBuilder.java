@@ -1,4 +1,4 @@
-package org.chrishood.gameobject;
+package org.chrishood.model.gameobject;
 
 /**
  * Created by Chris on 10/6/2015.

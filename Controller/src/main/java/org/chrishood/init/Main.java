@@ -1,14 +1,14 @@
 package org.chrishood.init;
 
-import org.chrishood.gameobject.Entity;
-import org.chrishood.gameobject.GameObject;
-import org.chrishood.gameobject.components.LocationComponent;
-import org.chrishood.mapping.Dungeon;
-import org.chrishood.mapping.TileMap;
-import org.chrishood.mapping.TileRepository;
-import org.chrishood.mapping.TileSet;
-import org.chrishood.mapping.builder.IMapBuilder;
-import org.chrishood.mapping.builder.StreamMapBuilder;
+import org.chrishood.model.gameobject.Entity;
+import org.chrishood.model.gameobject.GameObject;
+import org.chrishood.model.gameobject.components.LocationComponent;
+import org.chrishood.model.mapping.Dungeon;
+import org.chrishood.model.mapping.TileMap;
+import org.chrishood.model.mapping.TileRepository;
+import org.chrishood.model.mapping.TileSet;
+import org.chrishood.model.mapping.builder.IMapBuilder;
+import org.chrishood.model.mapping.builder.StreamMapBuilder;
 import net.slashie.libjcsi.CharKey;
 import net.slashie.libjcsi.ConsoleSystemInterface;
 import net.slashie.libjcsi.wswing.WSwingConsoleInterface;

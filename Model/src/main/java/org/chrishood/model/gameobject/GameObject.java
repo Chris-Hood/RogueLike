@@ -1,8 +1,8 @@
-package org.chrishood.gameobject;
+package org.chrishood.model.gameobject;
 
-import org.chrishood.gameobject.components.IGameComponent;
-import org.chrishood.gameobject.messages.GameObjectMessage;
-import org.chrishood.gameobject.messages.IMessageConsumer;
+import org.chrishood.model.gameobject.components.IGameComponent;
+import org.chrishood.model.gameobject.messages.GameObjectMessage;
+import org.chrishood.model.gameobject.messages.IMessageConsumer;
 
 import java.util.HashMap;
 import java.util.HashSet;

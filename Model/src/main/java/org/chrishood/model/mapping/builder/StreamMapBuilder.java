@@ -1,7 +1,7 @@
-package org.chrishood.mapping.builder;
+package org.chrishood.model.mapping.builder;
 
-import org.chrishood.mapping.TileMap;
-import org.chrishood.mapping.TileSet;
+import org.chrishood.model.mapping.TileMap;
+import org.chrishood.model.mapping.TileSet;
 
 import java.io.BufferedReader;
 import java.io.IOException;

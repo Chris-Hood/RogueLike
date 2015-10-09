@@ -1,4 +1,4 @@
-package org.chrishood.gameobject.messages;
+package org.chrishood.model.gameobject.messages;
 
 import org.chrishood.util.Point;
 

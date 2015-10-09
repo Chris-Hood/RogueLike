@@ -1,4 +1,4 @@
-package org.chrishood.mapping;
+package org.chrishood.model.mapping;
 
 import org.codehaus.jackson.JsonNode;
 import org.codehaus.jackson.JsonParser;

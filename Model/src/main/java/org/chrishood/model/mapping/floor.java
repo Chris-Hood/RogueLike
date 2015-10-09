@@ -1,6 +1,4 @@
-package org.chrishood.mapping;
-
-import org.chrishood.gameobject.GameObject;
+package org.chrishood.model.mapping;
 
 /**
  * Created by Chris on 10/8/2015.
